@@ -8,7 +8,7 @@
     "test": "tests"
   },
   "scripts": {
-    "docs": "jsdoc front-toolset.js -d docs",
+    "docs": "jsdoc --configure jsdoc.config.js",
     "test": "jest"
   },
   "author": "",
