@@ -2,7 +2,7 @@
 
 Projeto com varias funçoes uteis para o desenvolvimento front-end
 
-Link com os exemplos [link](https://www.google.com)
+Link com os exemplos em :[https://eficiencia-fiscal.github.io/front-toolset/](https://eficiencia-fiscal.github.io/front-toolset/)
 
 ## Install the repository
 ```shell
