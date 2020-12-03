@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>JSDoc: Source: front-toolset.js</title>
-
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
-
-<body>
-
-<div id="main">
-
-    <h1 class="page-title">Source: front-toolset.js</h1>
-
-    
-
-
-
-    
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>import Snackbar from 'node-snackbar'
+import Snackbar from 'node-snackbar'
 import StringMask from 'string-mask'
 
 /**
@@ -122,7 +94,7 @@ export function isDesktop() {
 export function generateUUID() {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     var r = Math.random() * 16 | 0
-    var v = c === 'x' ? r : (r &amp; 0x3 | 0x8)
+    var v = c === 'x' ? r : (r & 0x3 | 0x8)
     return v.toString(16)
   })
 }
@@ -140,7 +112,7 @@ export function saveEventOnAnalytics(category, actions, label, value) {
   label = label || id
   value = value || 0
 
-  if (!isApp() &amp;&amp; window.ga) window.ga('send', 'event', category, actions, label, value)
+  if (!isApp() && window.ga) window.ga('send', 'event', category, actions, label, value)
 }
 
 /**
@@ -153,15 +125,15 @@ export function notify(text, type) {
   let icon
   switch (type) {
     case 'success':
-      icon = '&lt;i class="fa fa-check" aria-hidden="true" style="color: #4caf50">&lt;/i>'
+      icon = '<i class="fa fa-check" aria-hidden="true" style="color: #4caf50"></i>'
       break
 
     case 'error':
-      icon = '&lt;i class="fa fa-times-circle" aria-hidden="true" style="color: #f44336">&lt;/i>'
+      icon = '<i class="fa fa-times-circle" aria-hidden="true" style="color: #f44336"></i>'
       break
 
     case 'info':
-      icon = '&lt;i class="fa fa-exclamation-triangle" aria-hidden="true" style="color: #ffeb3b">&lt;/i>'
+      icon = '<i class="fa fa-exclamation-triangle" aria-hidden="true" style="color: #ffeb3b"></i>'
       break
 
     default:
@@ -274,7 +246,7 @@ export function getCookie(key) {
   const name = `${key}=`
   const decodedCookie = decodeURIComponent(document.cookie)
   const ca = decodedCookie.split(';')
-  for (let i = 0; i &lt; ca.length; i += 1) {
+  for (let i = 0; i < ca.length; i += 1) {
     let c = ca[i]
     while (c.charAt(0) === ' ') {
       c = c.substring(1)
@@ -312,7 +284,7 @@ export function removeAccents(strToReplace) {
   const stringWithAccents = 'áàãâäéèêëíìîïóòõôöúùûüçÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÖÔÚÙÛÜÇ'
   const stringWithoutAccents = 'aaaaaeeeeiiiiooooouuuucAAAAAEEEEIIIIOOOOOUUUUC'
   let result = ''
-  for (var i = 0; i &lt; strToReplace.length; i++) {
+  for (var i = 0; i < strToReplace.length; i++) {
     if (stringWithAccents.indexOf(strToReplace.charAt(i)) != -1) {
       result += stringWithoutAccents.substr(stringWithAccents.search(strToReplace.substr(i, 1)), 1)
     } else {
@@ -349,7 +321,7 @@ export function isValidCpf(cpf) {
 
   soma = 0
 
-  for (i = 1; i &lt;= 9; i++) {
+  for (i = 1; i <= 9; i++) {
     soma += Math.floor(cpf.charAt(i - 1)) * (11 - i)
   }
 
@@ -365,7 +337,7 @@ export function isValidCpf(cpf) {
 
   soma = 0
 
-  for (i = 1; i &lt;= 10; i++) {
+  for (i = 1; i <= 10; i++) {
     soma += cpf.charAt(i - 1) * (12 - i)
   }
 
@@ -392,7 +364,7 @@ export function isValidCnpj(s) {
   var dv = s.substr(12, 2)
   var d1 = 0
 
-  for (i = 0; i &lt; 12; i++) {
+  for (i = 0; i < 12; i++) {
     d1 += c.charAt(11 - i) * (2 + (i % 8))
   }
 
@@ -407,7 +379,7 @@ export function isValidCnpj(s) {
 
   d1 *= 2
 
-  for (i = 0; i &lt; 12; i++) {
+  for (i = 0; i < 12; i++) {
     d1 += c.charAt(11 - i) * (2 + ((i + 1) % 8))
   }
 
@@ -428,7 +400,7 @@ export function isValidCpfOrCnpj(cpf__or_cnpj) {
   let number = cpf__or_cnpj.replace(/\.|-|\//g, '')
   let isValid = false
 
-  if (number.length > 11 &amp;&amp; isValidCnpj(number)) {
+  if (number.length > 11 && isValidCnpj(number)) {
     isValid = true
   } else {
     if (isValidCpf(number)) {
@@ -470,7 +442,7 @@ export function printHTML(html = "") {
 * @returns {String}
 */
 export function objectToURLParams(obj) {
-  return Object.entries(obj).map(i => [i[0], encodeURIComponent(i[1])].join('=')).join('&amp;')
+  return Object.entries(obj).map(i => [i[0], encodeURIComponent(i[1])].join('=')).join('&')
 }
 
 /**
@@ -494,26 +466,3 @@ export function URIToObject(url) {
 
   return obj
 }
-</code></pre>
-        </article>
-    </section>
-
-
-
-
-</div>
-
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#deleteCookie">deleteCookie</a></li><li><a href="global.html#formatCPForCNPJ">formatCPForCNPJ</a></li><li><a href="global.html#formatDateToBRL">formatDateToBRL</a></li><li><a href="global.html#formatFloat">formatFloat</a></li><li><a href="global.html#formatValueToCurrency">formatValueToCurrency</a></li><li><a href="global.html#generateUUID">generateUUID</a></li><li><a href="global.html#getCookie">getCookie</a></li><li><a href="global.html#getLocalStorageItem">getLocalStorageItem</a></li><li><a href="global.html#getSessionStorageItem">getSessionStorageItem</a></li><li><a href="global.html#goToLastPage">goToLastPage</a></li><li><a href="global.html#goToUrl">goToUrl</a></li><li><a href="global.html#isApp">isApp</a></li><li><a href="global.html#isValidCnpj">isValidCnpj</a></li><li><a href="global.html#isValidCpf">isValidCpf</a></li><li><a href="global.html#isValidCpfOrCnpj">isValidCpfOrCnpj</a></li><li><a href="global.html#justNumbers">justNumbers</a></li><li><a href="global.html#notify">notify</a></li><li><a href="global.html#objectToURLParams">objectToURLParams</a></li><li><a href="global.html#printHTML">printHTML</a></li><li><a href="global.html#removeAccents">removeAccents</a></li><li><a href="global.html#saveEventOnAnalytics">saveEventOnAnalytics</a></li><li><a href="global.html#searchCEP">searchCEP</a></li><li><a href="global.html#setCookie">setCookie</a></li><li><a href="global.html#setLocalStorageItem">setLocalStorageItem</a></li><li><a href="global.html#setSessionStorageItem">setSessionStorageItem</a></li><li><a href="global.html#uid">uid</a></li><li><a href="global.html#URIToObject">URIToObject</a></li></ul>
-</nav>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Thu Dec 03 2020 18:02:49 GMT-0400 (GMT-04:00)
-</footer>
-
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
-</body>
-</html>

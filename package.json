@@ -2,7 +2,7 @@
   "name": "front-toolset",
   "version": "1.0.0",
   "description": "Projeto com varias funçoes uteis para o desenvolvimento front-end",
-  "main": "front-toolset.js",
+  "main": "src/front-toolset.js",
   "directories": {
     "doc": "docs",
     "test": "tests"
@@ -14,10 +14,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.8.2",
     "node-snackbar": "^0.1.16",
-    "string-mask": "^0.3.0",
-    "vue": "^2.6.12"
+    "string-mask": "^0.3.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.12.7",

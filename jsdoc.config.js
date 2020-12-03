@@ -1,6 +1,6 @@
 module.exports = {
   "source": {
-    "include": ["./front-toolset.js"]
+    "include": ["./src/front-toolset.js"]
   },
   "opts": {
     "destination": "docs",

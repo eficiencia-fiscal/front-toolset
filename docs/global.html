@@ -94,83 +94,6 @@
     
 
     
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="EventBus"><span class="type-signature">(constant) </span>EventBus<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    Cria um EventBus para poder transmitir eventos entre os frameworks do front-end
-</div>
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line18">line 18</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>import { EventBus } from '@eficiencia-fiscal/front-toolset';
-// For publish/emit one event
-EventBus.$emit('EVENT_NAME', function_to_handle);
-// For listen/subscribe one event
-EventBus.$on('EVENT_NAME', function_to_handle);
-// For cancel listen/subscribe from event
-EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
-
-
-
-        
-    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -181,7 +104,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
 
     
-    <h4 class="name" id="broadcast"><span class="type-signature"></span>broadcast<span class="signature">(event, payload)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="deleteCookie"><span class="type-signature"></span>deleteCookie<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
@@ -189,7 +112,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
 
 
 <div class="description">
-    Função que faz o broadcast para os frameworks do front
+    Set a cookie key to expire at time of the call of function
 </div>
 
 
@@ -198,81 +121,6 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>event</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">O nome do evento que será feito o bradcast</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>payload</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-|
-
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Informação que será trasmisita</td>
-        </tr>
-
-    
-    </tbody>
-</table>
 
 
 
@@ -308,7 +156,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line281">line 281</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line269">line 269</a>
     </li></ul></dd>
     
 
@@ -344,7 +192,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
 
     
-    <h4 class="name" id="formatCPForCNPJ"><span class="type-signature"></span>formatCPForCNPJ<span class="signature">(CPForCNPJ)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    <h4 class="name" id="formatCPForCNPJ"><span class="type-signature"></span>formatCPForCNPJ<span class="signature">(CPForCNPJ)</span><span class="type-signature"> &rarr; {String}</span></h4>
     
 
     
@@ -394,7 +242,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 
 
             
@@ -445,7 +293,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line243">line 243</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line153">line 153</a>
     </li></ul></dd>
     
 
@@ -485,7 +333,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     </dt>
     <dd>
         
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 
 
     </dd>
@@ -503,7 +351,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
 
     
-    <h4 class="name" id="formatDateToBRL"><span class="type-signature"></span>formatDateToBRL<span class="signature">(data)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    <h4 class="name" id="formatDateToBRL"><span class="type-signature"></span>formatDateToBRL<span class="signature">(data)</span><span class="type-signature"> &rarr; {String}</span></h4>
     
 
     
@@ -553,7 +401,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
             <td class="type">
             
                 
-<span class="param-type">date</span>
+<span class="param-type">Date</span>
 
 
             
@@ -604,7 +452,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line303">line 303</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line201">line 201</a>
     </li></ul></dd>
     
 
@@ -644,7 +492,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     </dt>
     <dd>
         
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 
 
     </dd>
@@ -662,7 +510,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
 
     
-    <h4 class="name" id="formatFloat"><span class="type-signature"></span>formatFloat<span class="signature">(float_number)</span><span class="type-signature"> &rarr; {float}</span></h4>
+    <h4 class="name" id="formatFloat"><span class="type-signature"></span>formatFloat<span class="signature">(float_number)</span><span class="type-signature"> &rarr; {Float}</span></h4>
     
 
     
@@ -769,7 +617,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line313">line 313</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line211">line 211</a>
     </li></ul></dd>
     
 
@@ -809,7 +657,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     </dt>
     <dd>
         
-<span class="param-type">float</span>
+<span class="param-type">Float</span>
 
 
     </dd>
@@ -827,7 +675,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
 
     
-    <h4 class="name" id="formatValueToCurrency"><span class="type-signature"></span>formatValueToCurrency<span class="signature">(value)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    <h4 class="name" id="formatValueToCurrency"><span class="type-signature"></span>formatValueToCurrency<span class="signature">(value)</span><span class="type-signature"> &rarr; {String}</span></h4>
     
 
     
@@ -877,7 +725,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 
 
             
@@ -928,7 +776,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line293">line 293</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line191">line 191</a>
     </li></ul></dd>
     
 
@@ -968,7 +816,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     </dt>
     <dd>
         
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 
 
     </dd>
@@ -986,7 +834,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
 
     
-    <h4 class="name" id="generateUUID"><span class="type-signature"></span>generateUUID<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+    <h4 class="name" id="generateUUID"><span class="type-signature"></span>generateUUID<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
     
 
     
@@ -1038,7 +886,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line153">line 153</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line94">line 94</a>
     </li></ul></dd>
     
 
@@ -1078,7 +926,119 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     </dt>
     <dd>
         
-<span class="param-type">string</span>
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getCookie"><span class="type-signature"></span>getCookie<span class="signature">()</span><span class="type-signature"> &rarr; {String|Object|Array}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Get a cookie with a ttl time
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line245">line 245</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">Array</span>
 
 
     </dd>
@@ -1197,7 +1157,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line88">line 88</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line29">line 29</a>
     </li></ul></dd>
     
 
@@ -1283,7 +1243,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 
 
             
@@ -1334,7 +1294,95 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line112">line 112</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line53">line 53</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="goToLastPage"><span class="type-signature"></span>goToLastPage<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Return to last visited page
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line276">line 276</a>
     </li></ul></dd>
     
 
@@ -1471,7 +1519,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line68">line 68</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line9">line 9</a>
     </li></ul></dd>
     
 
@@ -1507,301 +1555,7 @@ EventBus.$off('EVENT_NAME', function_to_handle);</code></pre>
     
 
     
-    <h4 class="name" id="identifyMachine"><span class="type-signature"></span>identifyMachine<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Função utilizada criar um identificador unico da máquina
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line167">line 167</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    Retorna um uuid ou se o usuário estiver logado,
-uuid mais os dados do usuário logado, para criar um identificador unico da máquina
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="instanciaVueComponent"><span class="type-signature"></span>instanciaVueComponent<span class="signature">($transitions, component_name, seletor)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Função utilizada para poder instanciar component vue dinamicamente
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>$transitions</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Diretiva do UI Router que nos dará o callback para renderizar somente quando o ciclo do angular acabar</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>component_name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Componente que será feito o download e renderizado</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>seletor</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Seletor do dom onde o componente do Vue será renderizado</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line27">line 27</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="isApp"><span class="type-signature"></span>isApp<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    <h4 class="name" id="isApp"><span class="type-signature"></span>isApp<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
     
 
     
@@ -1854,7 +1608,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line126">line 126</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line67">line 67</a>
     </li></ul></dd>
     
 
@@ -1894,7 +1648,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     </dt>
     <dd>
         
-<span class="param-type">boolean</span>
+<span class="param-type">Boolean</span>
 
 
     </dd>
@@ -1912,7 +1666,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     
 
     
-    <h4 class="name" id="lazyLoad"><span class="type-signature"></span>lazyLoad<span class="signature">(arrayName)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="isValidCnpj"><span class="type-signature"></span>isValidCnpj<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
@@ -1920,7 +1674,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
 
 
 <div class="description">
-    Função para poder fazer o download de arquivos ao ser altera do History API e com isso conseguir o Code Split
+    Validate if the string is a valid CNPJ document
 </div>
 
 
@@ -1929,55 +1683,6 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>arrayName</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">array</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Array com os nomes dos componentes que serão adicionados dinamicamente.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
 
 
 
@@ -2013,7 +1718,271 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line43">line 43</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line360">line 360</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="isValidCpf"><span class="type-signature"></span>isValidCpf<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Validate if the string is a valid CPF document
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line307">line 307</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="isValidCpfOrCnpj"><span class="type-signature"></span>isValidCpfOrCnpj<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Validate if the string is a valid CPF or CNPJ document
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line399">line 399</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="justNumbers"><span class="type-signature"></span>justNumbers<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Return just the numbers in string
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line300">line 300</a>
     </li></ul></dd>
     
 
@@ -2099,7 +2068,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 
 
             
@@ -2122,7 +2091,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 
 
             
@@ -2173,7 +2142,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line203">line 203</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line124">line 124</a>
     </li></ul></dd>
     
 
@@ -2209,7 +2178,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     
 
     
-    <h4 class="name" id="returnScopeFromSeletor"><span class="type-signature"></span>returnScopeFromSeletor<span class="signature">(seletor)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    <h4 class="name" id="objectToURLParams"><span class="type-signature"></span>objectToURLParams<span class="signature">(obj)</span><span class="type-signature"> &rarr; {String}</span></h4>
     
 
     
@@ -2217,7 +2186,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
 
 
 <div class="description">
-    Função retorna o angular scope de um DOM
+    Print the HTML in another page
 </div>
 
 
@@ -2253,13 +2222,13 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
 
         <tr>
             
-                <td class="name"><code>seletor</code></td>
+                <td class="name"><code>obj</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">Object</span>
 
 
             
@@ -2269,7 +2238,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
 
             
 
-            <td class="description last">Seletor do DOM que está sendo renderizado pelo o angular</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -2310,7 +2279,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line232">line 232</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line444">line 444</a>
     </li></ul></dd>
     
 
@@ -2338,10 +2307,6 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    Retorna o $scope do angular do DOM
-</div>
-
 
 
 <dl>
@@ -2350,13 +2315,189 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     </dt>
     <dd>
         
-<span class="param-type">object</span>
+<span class="param-type">String</span>
 
 
     </dd>
 </dl>
 
     
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="printHTML"><span class="type-signature"></span>printHTML<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Print the HTML in another page
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line430">line 430</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="removeAccents"><span class="type-signature"></span>removeAccents<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Remove the accents of the string
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line283">line 283</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2418,7 +2559,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 
 
             
@@ -2469,7 +2610,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line186">line 186</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line107">line 107</a>
     </li></ul></dd>
     
 
@@ -2494,6 +2635,218 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
 
 
 
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="searchCEP"><span class="type-signature"></span>searchCEP<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Search the CEP in a API and return the object with data
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line418">line 418</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="setCookie"><span class="type-signature"></span>setCookie<span class="signature">()</span><span class="type-signature"> &rarr; {Void}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Set a cookie with a ttl time
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line229">line 229</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Void</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
@@ -2635,7 +2988,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line78">line 78</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line19">line 19</a>
     </li></ul></dd>
     
 
@@ -2721,7 +3074,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 
 
             
@@ -2744,13 +3097,13 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 |
 
-<span class="param-type">object</span>
+<span class="param-type">Object</span>
 |
 
-<span class="param-type">number</span>
+<span class="param-type">Number</span>
 
 
             
@@ -2801,7 +3154,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line102">line 102</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line43">line 43</a>
     </li></ul></dd>
     
 
@@ -2837,7 +3190,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     
 
     
-    <h4 class="name" id="uid"><span class="type-signature"></span>uid<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+    <h4 class="name" id="uid"><span class="type-signature"></span>uid<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
     
 
     
@@ -2889,7 +3242,7 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line322">line 322</a>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line220">line 220</a>
     </li></ul></dd>
     
 
@@ -2929,7 +3282,162 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
     </dt>
     <dd>
         
-<span class="param-type">string</span>
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="URIToObject"><span class="type-signature"></span>URIToObject<span class="signature">(url)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Read the string and return a object of the params
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="front-toolset.js.html">front-toolset.js</a>, <a href="front-toolset.js.html#line453">line 453</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
 
 
     </dd>
@@ -2957,13 +3465,13 @@ com isto da de identificar se está sendo renderizado em um aplicativo híbrido 
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#broadcast">broadcast</a></li><li><a href="global.html#EventBus">EventBus</a></li><li><a href="global.html#formatCPForCNPJ">formatCPForCNPJ</a></li><li><a href="global.html#formatDateToBRL">formatDateToBRL</a></li><li><a href="global.html#formatFloat">formatFloat</a></li><li><a href="global.html#formatValueToCurrency">formatValueToCurrency</a></li><li><a href="global.html#generateUUID">generateUUID</a></li><li><a href="global.html#getLocalStorageItem">getLocalStorageItem</a></li><li><a href="global.html#getSessionStorageItem">getSessionStorageItem</a></li><li><a href="global.html#goToUrl">goToUrl</a></li><li><a href="global.html#identifyMachine">identifyMachine</a></li><li><a href="global.html#instanciaVueComponent">instanciaVueComponent</a></li><li><a href="global.html#isApp">isApp</a></li><li><a href="global.html#lazyLoad">lazyLoad</a></li><li><a href="global.html#notify">notify</a></li><li><a href="global.html#returnScopeFromSeletor">returnScopeFromSeletor</a></li><li><a href="global.html#saveEventOnAnalytics">saveEventOnAnalytics</a></li><li><a href="global.html#setLocalStorageItem">setLocalStorageItem</a></li><li><a href="global.html#setSessionStorageItem">setSessionStorageItem</a></li><li><a href="global.html#uid">uid</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#deleteCookie">deleteCookie</a></li><li><a href="global.html#formatCPForCNPJ">formatCPForCNPJ</a></li><li><a href="global.html#formatDateToBRL">formatDateToBRL</a></li><li><a href="global.html#formatFloat">formatFloat</a></li><li><a href="global.html#formatValueToCurrency">formatValueToCurrency</a></li><li><a href="global.html#generateUUID">generateUUID</a></li><li><a href="global.html#getCookie">getCookie</a></li><li><a href="global.html#getLocalStorageItem">getLocalStorageItem</a></li><li><a href="global.html#getSessionStorageItem">getSessionStorageItem</a></li><li><a href="global.html#goToLastPage">goToLastPage</a></li><li><a href="global.html#goToUrl">goToUrl</a></li><li><a href="global.html#isApp">isApp</a></li><li><a href="global.html#isValidCnpj">isValidCnpj</a></li><li><a href="global.html#isValidCpf">isValidCpf</a></li><li><a href="global.html#isValidCpfOrCnpj">isValidCpfOrCnpj</a></li><li><a href="global.html#justNumbers">justNumbers</a></li><li><a href="global.html#notify">notify</a></li><li><a href="global.html#objectToURLParams">objectToURLParams</a></li><li><a href="global.html#printHTML">printHTML</a></li><li><a href="global.html#removeAccents">removeAccents</a></li><li><a href="global.html#saveEventOnAnalytics">saveEventOnAnalytics</a></li><li><a href="global.html#searchCEP">searchCEP</a></li><li><a href="global.html#setCookie">setCookie</a></li><li><a href="global.html#setLocalStorageItem">setLocalStorageItem</a></li><li><a href="global.html#setSessionStorageItem">setSessionStorageItem</a></li><li><a href="global.html#uid">uid</a></li><li><a href="global.html#URIToObject">URIToObject</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Mon Nov 30 2020 09:25:51 GMT-0400 (GMT-04:00)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Thu Dec 03 2020 18:02:49 GMT-0400 (GMT-04:00)
 </footer>
 
 <script> prettyPrint(); </script>
