@@ -8,7 +8,7 @@
     "test": "tests"
   },
   "scripts": {
-    "docs": "jsdoc --configure jsdoc.config.js",
+    "docs": "rm -rf docs && jsdoc --configure jsdoc.config.js",
     "test": "jest"
   },
   "author": "",
