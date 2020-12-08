@@ -6,7 +6,7 @@ Link com os exemplos em: [https://eficiencia-fiscal.github.io/front-toolset/](ht
 
 ## Install the repository
 ```shell
-npm install @eficiencia-fiscal/front-toolset
+npm install eficiencia-fiscal/front-toolset
 ```
 
 ## Run the tests
